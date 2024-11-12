@@ -140,7 +140,7 @@ p {
 .sidebar button {
   background-color: rgb(166, 162, 162);
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 40px;
   border: solid 2px black;
   text-align: center;
   color: black;
