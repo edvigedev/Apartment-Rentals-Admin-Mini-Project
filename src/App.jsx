@@ -6,13 +6,14 @@ import PropertyList from "./Components/PropertyList";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      <Sidebar />
-      <PropertyList />
+      <div className="main-content">
+        <Sidebar />
+        <PropertyList />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
-
 export default App;
