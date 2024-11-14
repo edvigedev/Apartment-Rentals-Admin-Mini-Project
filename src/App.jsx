@@ -6,7 +6,6 @@ import { Route, Routes } from "react-router-dom";
 import PropertyList from "./Components/PropertyList";
 import PropertyDetails from "./pages/propertyDetails";
 import AboutUs from "./pages/aboutUs";
-import propertyDatas from "./assets/data/data.json";
 
 function App() {
   return (
@@ -16,8 +15,11 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/" element={<PropertyList />} />
-          <Route path="/propertyDetails" element={<PropertyDetails />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route
+            path="/PropertyDetails/:PropertyId"
+            element={<PropertyDetails />}
+          />
+          <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
       </div>
       <Footer />

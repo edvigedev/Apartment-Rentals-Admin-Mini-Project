@@ -1,11 +1,10 @@
 // Import React library and useState hook from react library
-import React from "react";
-// Import useState hook from react library
-import { useState } from "react";
+import React, { useState } from "react";
 // Import property data from assets/data/data.json file
 import propertyDatas from "../assets/data/data.json";
 // Import Property component from properties/Property.js file
 import Property from "./Property";
+import { Link } from "react-router-dom";
 
 /**
  * PropertyList component renders a list of properties.
@@ -22,19 +21,21 @@ const PropertyList = () => {
   return (
     // Render a div element to contain the property list
     <div>
-      {properties.map((property) => (
+      {properties.map((property) => {
+        // Ignore properties with null or undefined price
+        if (!property.price) return null;
+
         // Render Property component for each property in state
         // Use property ID as key for mapping
-        <div key={property.id}>
-          <Link to={`/propertyDetails/${property.id}`}>
-            <h2>{property.name}</h2> {/* Clickable link to PropertyDetails */}
-          </Link>
-          <Property
-            property={property}
-            deleteProperty={deleteProperty} // Pass deleteProperty function to Property  component
-          />
-        </div>
-      ))}
+        return (
+          <div key={property.id}>
+            <Property
+              property={property}
+              deleteProperty={deleteProperty} // Pass deleteProperty function to Property component
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -6,7 +6,6 @@ const Sidebar = () => {
       <button>Great-Deals</button>
       <button>Premium</button>
       <button>VIP</button>
-      <button>Close</button>
     </div>
   );
 };

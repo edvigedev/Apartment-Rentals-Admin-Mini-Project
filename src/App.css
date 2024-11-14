@@ -33,14 +33,6 @@ p {
   justify-content: space-around;
   align-items: center;
   padding: 15px;
-  /* margin: 0 50px; */
-  /* margin-top: 5px; */
-  /* width: 90vw; */
-  /* position: fixed; Fixe la navbar en haut */
-  /* top: 0; /* Place la navbar en haut de l'écran */
-  /* left: 50%; Centre la navbar horizontalement */
-  /* transform: translateX(-50%); Compense pour centrer complètement */
-  /* z-index: 10; Assure que la navbar reste au-dessus des autres éléments */
 }
 
 .navbar img {
@@ -76,7 +68,7 @@ p {
 .sidebar {
   background-color: rgb(213, 234, 202);
   padding: 20px 40px;
-  height: 90vh;
+  height: 80vh;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
@@ -84,6 +76,7 @@ p {
   align-items: center;
   margin-bottom: 30px;
   border-radius: 30px;
+  margin-right: 60px;
 }
 
 .sidebar button {
@@ -125,62 +118,74 @@ footer {
   opacity: 85%;
 }
 
-/* .all-properties {
-  top: -200px;
-  margin-left: 30vw;
-} */
 .property-container {
   width: 70%;
+  max-width: 70%;
   height: auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
+  margin-top: 3px;
   padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgba(1, 19, 125, 0.384);
+}
+
+.infos-text {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 .property-container img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 3em;
-  width: 70%;
-  height: 10%;
-  margin: 20px, 10px;
+  height: 25vh;
+  width: 30vh;
+  margin-right: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .property-container h1 {
   font-size: 1.8vw;
   text-align: left;
+  max-width: 500px;
 }
 
 .property-container h3 {
   font-size: 1.5vw;
   text-align: left;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 #verified {
   font-size: 1.5vw;
-  text-align: left;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgba(128, 128, 128, 0.34);
+  width: 180px;
 }
 
 .delete-button {
-  background-color: rgb(239, 244, 236);
-  border-radius: 50px;
-  border: none;
+  background-color: rgba(224, 77, 77, 0.512);
+  border-radius: 10px;
+  border: 0.5px solid black;
   color: rgb(0, 6, 4);
   cursor: pointer;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 20px;
-  width: 50px;
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 102px;
 }
 
 .founders img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .founders {
@@ -202,8 +207,26 @@ footer {
   width: 1000px;
 }
 
+.founder img {
+  margin-top: 60px;
+  transition: border 0.3s ease; /* for a smooth transition */
+}
+
+.founder img:hover {
+  border: 5px solid rgb(6, 103, 67); /* the border color when hovering over the image */
+}
+
 .founder a {
   text-decoration: none;
   color: inherit;
   margin-top: 15px;
+}
+
+.property-links {
+  text-decoration: none;
+  color: inherit;
+}
+
+.property-links:hover {
+  color: #3498db; /* Replace #3498db with your desired color */
 }
