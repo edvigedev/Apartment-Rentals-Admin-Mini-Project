@@ -172,8 +172,8 @@ p {
   color: rgb(6, 103, 67);
   cursor: pointer;
   font-size: 1vw;
-  height: 3.8vh;
-  width: 6vw;
+  height: 4vh;
+  width: 8vw;
   font-weight: 600;
 }
 
@@ -191,6 +191,7 @@ p {
 
 .sidebar {
   width: 10vw;
+  min-width: 400px;
   background-color: rgb(213, 234, 202);
   padding: 20px;
   border: 2px solid rgb(192, 185, 185);
@@ -212,8 +213,8 @@ p {
   color: rgb(6, 103, 67);
   cursor: pointer;
   font-size: 1vw;
-  height: 3.8vh;
-  width: 6vw;
+  height: 4vh;
+  width: 7vw;
   font-weight: 600;
 }
 
@@ -247,7 +248,7 @@ footer {
   margin-left: 30vw;
 }
 .property-container {
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -261,23 +262,22 @@ footer {
 
 .property-container img {
   display: flex;
-
   justify-content: flex-start;
   align-items: flex-start;
   padding: 3em;
-  width: 55%;
-  height: 30%;
+  width: 50%;
+  height: 10%;
   margin: 20px, 10px;
 }
 
 .property-container h1 {
-  font-size: 4em;
+  font-size: 1.8vw;
 }
 
 .property-container h3 {
-  font-size: 4em;
+  font-size: 1.5vw;
 }
 
 #verified {
-  font-size: 2em;
+  font-size: 1.5vw;
 }

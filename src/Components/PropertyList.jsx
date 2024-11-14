@@ -13,7 +13,7 @@ const PropertyList = () => {
           <h1>{property.name}</h1>
           <h3> Price: {property.price} $</h3>
           <div id="verified">
-            Host Identity Verified
+            Verified Host{" "}
             {property.host_identity_verified === true ? "✅" : "❌"}
           </div>
           <button
