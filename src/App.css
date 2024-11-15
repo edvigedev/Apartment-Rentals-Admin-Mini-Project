@@ -53,6 +53,12 @@ p {
   padding: 20px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+.active {
+  background-color: #004c4c;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
 
 .navbar button:hover {
   background-color: #004c4c;
@@ -168,12 +174,15 @@ footer {
 }
 
 #verified {
-  font-size: 1.5vw;
-  /* border: 0.5px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1vw;
+  height: 10px;
   border-radius: 10px;
   padding: 10px;
   background-color: rgb(239, 244, 236);
-  width: 190px;
+  width: 120px;
 }
 
 .delete-button {

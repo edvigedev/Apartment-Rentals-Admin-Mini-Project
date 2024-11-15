@@ -18,7 +18,7 @@ const Property = ({ property, deleteProperty }) => {
           <h3>Price: {property.price} </h3>
           <div id="verified">
             Verified Host{" "}
-            {property.host_identity_verified === true ? "✅" : "❌"}
+            {property.host_identity_verified === true ? <p>✅</p> : <p>❌</p>}
           </div>
           <button
             className="delete-button"

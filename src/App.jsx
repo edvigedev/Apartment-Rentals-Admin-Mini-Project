@@ -20,6 +20,7 @@ function App() {
             element={<PropertyDetails />}
           />
           <Route path="/AboutUs" element={<AboutUs />} />
+          nm
         </Routes>
       </div>
       <Footer />
