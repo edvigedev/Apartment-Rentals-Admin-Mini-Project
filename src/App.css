@@ -12,7 +12,7 @@ body,
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 /* h1,
@@ -34,6 +34,7 @@ p {
   justify-content: space-around;
   align-items: center;
   padding: 15px;
+  width: 100vw;
 }
 
 .navbar img {
@@ -132,7 +133,7 @@ footer {
 
 .property-container {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 70%;
+  width: 65%;
   max-width: 70%;
   height: auto;
   display: flex;
@@ -156,8 +157,8 @@ footer {
   height: 25vh;
   width: 30vh;
   margin-right: 50px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
 }
 
 .property-container h1 {
@@ -174,6 +175,7 @@ footer {
 }
 
 #verified {
+<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -183,11 +185,19 @@ footer {
   padding: 10px;
   background-color: rgb(239, 244, 236);
   width: 120px;
+=======
+  font-size: 1.5vw;
+  /* border: 0.5px solid black; */
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(239, 244, 236);
+  width: 35%;
+>>>>>>> d65431a6254ed4f14b7977c9d33052023e64dc28
 }
 
 .delete-button {
   background-color: rgba(224, 77, 77, 0.512);
-  border-radius: 10px;
+  border-radius: 5px;
   /* border: 0.5px solid black; */
   /* color: rgb(0, 6, 4); */
   border: none;
@@ -195,7 +205,7 @@ footer {
   font-size: 15px;
   margin-top: 10px;
   padding: 7px;
-  width: 102px;
+  width: 20%;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
