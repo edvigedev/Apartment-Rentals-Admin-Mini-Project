@@ -8,7 +8,7 @@ const Navbar = () => {
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>
-      <NavLink to="/PropertyDetails">
+      <NavLink to="/AddProperty">
         <button>Add a Property</button>
       </NavLink>
       <NavLink to="/AboutUs">

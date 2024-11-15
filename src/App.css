@@ -175,6 +175,10 @@ footer {
 }
 
 #verified {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10px;
   font-size: 1.5vw;
   /* border: 0.5px solid black; */
   border-radius: 5px;
@@ -245,4 +249,151 @@ footer {
 
 .property-links:hover {
   color: #3498db; /* Replace #3498db with your desired color */
+}
+
+.add-property {
+  font-size: 20px;
+  margin-left: 250px;
+}
+
+.add-property h4 {
+  font-size: 30px;
+  color: aliceblue;
+  background-color: #004c4c;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 500px;
+  padding: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  margin: 5px;
+  width: 500px;
+}
+
+form button {
+  margin: 30px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+/*property details styling below*/
+
+/* Property Details Styling */
+.property-details-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-details-title {
+  font-size: 2em;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.property-details-locations {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.property-details-span {
+  display: flex;
+  gap: 10px;
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.property-details-span span {
+  padding-right: 8px;
+  border-right: 1px solid #ddd;
+}
+
+.property-details-span span:last-child {
+  border-right: none;
+}
+
+.property-details-summary {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.property-details-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* .infos-text {
+  font-size: 1.2em;
+  color: #e63946;
+  font-weight: bold; */
+
+.property-details-price {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Host Information */
+.property-details-host-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.property-details-host-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.property-details-host-info h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.property-details-host-info p {
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Amenities */
+.property-details-amenities {
+  margin-top: 20px;
+}
+
+.property-details-amenities h4 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.property-details-amenities ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.property-details-amenities li {
+  font-size: 0.9em;
+  color: #666;
+  padding: 5px 0;
 }
