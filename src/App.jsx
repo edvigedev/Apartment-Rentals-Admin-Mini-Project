@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
 import { Route, Routes } from "react-router-dom";
 import PropertyList from "./Components/PropertyList";
-import PropertyDetails from "./pages/propertyDetails";
+import PropertyDetails from "./pages/PropertyDetails";
 import AboutUs from "./pages/aboutUs";
 
 function App() {

@@ -1,7 +1,16 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import propertyDatas from "../assets/data/data.json";
 
 const PropertyDetails = ({ property }) => {
-  if (!property) {
+  const { PropertyId } = useParams(); // Get the property ID from the URL
+  const propertyDetail = propertyDatas.results.find(
+    (prop) => prop.id == PropertyId
+  ); // Find the property with the matching ID
+
+  console.log(propertyDetail);
+
+  if (!propertyDetail) {
     return (
       <div className="property-details-page">
         Property details not available.
@@ -12,13 +21,13 @@ const PropertyDetails = ({ property }) => {
   return (
     <div className="property-details-page">
       <img
-        src={property.picture_url}
+        src={propertyDetail.picture_url}
         className="property-details-image"
-        alt={property.name || "Property image"}
+        alt={propertyDetail.name || "Property image"}
       />
-      <h1 className="property-details-title">{property.name}</h1>
+      <h1 className="property-details-title">{propertyDetail.name}</h1>
       <h3 className="property-details-price">
-        Price: {property.price != null ? property.price : "N/A"}
+        Price: {propertyDetail.price != null ? propertyDetail.price : "N/A"}
       </h3>
       <p></p>
     </div>
