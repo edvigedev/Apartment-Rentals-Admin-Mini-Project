@@ -17,7 +17,7 @@ const Property = ({ property, deleteProperty }) => {
           </Link>
           <h3>Price: {property.price} </h3>
           <div id="verified">
-            Verified Host :{" "}
+            Verified Host{" "}
             {property.host_identity_verified === true ? "✅" : "❌"}
           </div>
           <button

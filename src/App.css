@@ -4,8 +4,8 @@ body,
   padding: 0;
   width: 100vw;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(239, 244, 236);
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .app-container {
@@ -15,20 +15,21 @@ body,
   width: 100%;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+} */
 
 .navbar {
-  background-color: rgb(213, 234, 202);
+  background-color: #004c4c;
+  color: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -36,13 +37,12 @@ p {
 }
 
 .navbar img {
-  height: 4.5em;
+  height: 5em;
   width: auto;
 }
 
 .navbar button {
-  background-color: rgb(239, 244, 236);
-  border-radius: 50px;
+  border-radius: 4px;
   padding: 10px 15px;
   border: none;
   text-align: center;
@@ -51,11 +51,13 @@ p {
   font-size: 15px;
   font-weight: 600;
   padding: 20px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .navbar button:hover {
-  background-color: rgb(6, 103, 67);
-  color: rgb(239, 244, 236);
+  background-color: #004c4c;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .main-content {
@@ -66,7 +68,8 @@ p {
 }
 
 .sidebar {
-  background-color: rgb(213, 234, 202);
+  background-color: #004c4c;
+  color: #fff;
   padding: 20px 40px;
   height: 80vh;
   margin-left: 20px;
@@ -75,13 +78,13 @@ p {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 30px;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-right: 60px;
 }
 
 .sidebar button {
   background-color: rgb(239, 244, 236);
-  border-radius: 50px;
+  border-radius: 4px;
   padding: 10px 15px;
   border: none;
   text-align: center;
@@ -91,11 +94,13 @@ p {
   font-weight: 600;
   padding: 20px;
   width: 150px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .sidebar button:hover {
-  background-color: rgb(6, 103, 67);
-  color: rgb(239, 244, 236);
+  background-color: #004c4c;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .sidebar li {
@@ -110,7 +115,8 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(213, 234, 202);
+  background-color: #004c4c;
+  color: #fff;
   height: 10vh;
   padding: 20px;
   border-top-right-radius: 10px;
@@ -119,6 +125,7 @@ footer {
 }
 
 .property-container {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   width: 70%;
   max-width: 70%;
   height: auto;
@@ -128,9 +135,9 @@ footer {
   margin: 20px auto;
   margin-top: 3px;
   padding: 20px;
-  border: 1px solid black;
-  border-radius: 20px;
-  background-color: rgba(1, 19, 125, 0.384);
+  border-radius: 10px;
+  background-color: #fff;
+  color: #004c4c;
 }
 
 .infos-text {
@@ -162,23 +169,25 @@ footer {
 
 #verified {
   font-size: 1.5vw;
-  border: 0.5px solid black;
+  /* border: 0.5px solid black; */
   border-radius: 10px;
-  padding: 5px;
-  background-color: rgba(128, 128, 128, 0.34);
-  width: 180px;
+  padding: 10px;
+  background-color: rgb(239, 244, 236);
+  width: 190px;
 }
 
 .delete-button {
   background-color: rgba(224, 77, 77, 0.512);
   border-radius: 10px;
-  border: 0.5px solid black;
-  color: rgb(0, 6, 4);
+  /* border: 0.5px solid black; */
+  /* color: rgb(0, 6, 4); */
+  border: none;
   cursor: pointer;
   font-size: 15px;
   margin-top: 10px;
-  padding: 5px;
+  padding: 7px;
   width: 102px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .founders img {
