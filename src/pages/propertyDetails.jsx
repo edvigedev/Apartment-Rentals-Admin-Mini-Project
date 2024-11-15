@@ -19,16 +19,18 @@ const PropertyDetails = ({ property }) => {
   }
 
   return (
-    <div className="property-details-page">
+    <div className="property-container">
       <img
         src={propertyDetail.picture_url}
         className="property-details-image"
         alt={propertyDetail.name || "Property image"}
       />
-      <h1 className="property-details-title">{propertyDetail.name}</h1>
-      <h3 className="property-details-price">
-        Price: {propertyDetail.price != null ? propertyDetail.price : "N/A"}
-      </h3>
+      <div className="infos-text">
+        <h1 className="property-details-title">{propertyDetail.name}</h1>
+        <h3 className="property-details-price">
+          Price: {propertyDetail.price != null ? propertyDetail.price : "N/A"}
+        </h3>
+      </div>
       <p></p>
     </div>
   );
