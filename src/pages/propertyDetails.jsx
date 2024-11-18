@@ -33,15 +33,25 @@ const PropertyDetails = () => {
         alt={propertyDetail.name || "Property Image"}
       />
       <h3 className="property-details-price">
-        Price: {propertyDetail.price != null ? propertyDetail.price : "N/A"}
+        Price: {propertyDetail.price != null ? propertyDetail.price : "N/A"}{" "}
+        q.d.
       </h3>
       <div className="property-details-host-info">
         <img
           src={propertyDetail.host_picture_url || "default-host.jpg"}
           alt={propertyDetail.host_name || "Host Name"}
         />
+
         <h4>Your host, {propertyDetail.host_name || "Unknown"}</h4>
         <p>{propertyDetail.host_is_superhost ? "Superhost" : "Regular Host"}</p>
+        <div id="property-detail-verified">
+          Verified{" "}
+          {propertyDetail.host_identity_verified === true ? (
+            <p>✅</p>
+          ) : (
+            <p>❌</p>
+          )}
+        </div>
       </div>
       <div className="property-details-amenities">
         <h4>Amenities:</h4>

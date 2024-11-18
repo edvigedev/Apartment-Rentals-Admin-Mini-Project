@@ -1,6 +1,4 @@
 import React from "react";
-import { useState } from "react";
-import PropertyList from "./PropertyList";
 import { Link } from "react-router-dom";
 
 const Property = ({ property, deleteProperty }) => {
@@ -15,11 +13,22 @@ const Property = ({ property, deleteProperty }) => {
           >
             <h1>{property.name}</h1> {/* Clickable link to PropertyDetails */}
           </Link>
-          <h3>Price: {property.price} </h3>
+          <h3>Price: {property.price} night </h3>
           <div id="verified">
             Verified Host{" "}
             {property.host_identity_verified === true ? <p>✅</p> : <p>❌</p>}
           </div>
+
+          <div id="labels">
+            {parseFloat(property.price.replace("$", "")) <= 50 ? (
+              <label className="great-deals">Great Deal</label>
+            ) : parseFloat(property.price.replace("$", "")) <= 150 ? (
+              <label className="premium">Premium</label>
+            ) : (
+              <label className="vip">VIP</label>
+            )}
+          </div>
+
           <button
             className="delete-button"
             onClick={() => deleteProperty(property.id)}

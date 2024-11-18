@@ -9,6 +9,9 @@ import AddProperty from "./pages/AddProperty";
 import React, { useState } from "react";
 import PropertyDatas from "./assets/data/data.json";
 import PropertyDetails from "./pages/propertyDetails";
+import GreatDeals from "./pages/GreatDeals";
+import Premium from "./pages/Premium";
+import Vip from "./pages/Vip";
 
 function App() {
   const [properties, setProperties] = useState(PropertyDatas.results);
@@ -42,6 +45,27 @@ function App() {
             }
           />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route
+            path="/GreatDeals"
+            element={
+              <GreatDeals
+                properties={properties}
+                setProperties={setProperties}
+              />
+            }
+          />
+          <Route
+            path="/Premium"
+            element={
+              <Premium properties={properties} setProperties={setProperties} />
+            }
+          />
+          <Route
+            path="/Vip"
+            element={
+              <Vip properties={properties} setProperties={setProperties} />
+            }
+          />
         </Routes>
       </div>
       <Footer />

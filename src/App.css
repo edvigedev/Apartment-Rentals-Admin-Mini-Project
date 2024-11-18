@@ -178,13 +178,44 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10px;
-  font-size: 1.5vw;
+  height: 8px;
+  font-size: 15px;
   /* border: 0.5px solid black; */
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 3px;
+  padding: 15px;
   background-color: rgb(239, 244, 236);
   width: 35%;
+  margin: 10px, 3px;
+}
+
+#labels {
+  display: flex;
+  width: 30%;
+  margin: 10px 0px;
+  justify-content: center;
+  box-shadow: #888;
+  align-items: flex-start;
+}
+
+.great-deals {
+  background-color: #9df3b7;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.premium {
+  background-color: #84ccfa;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.vip {
+  background-color: #c3a3f6;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .delete-button {
@@ -292,7 +323,7 @@ form button {
 .property-details-container {
   width: 80%;
   margin: 20px auto;
-  padding: 20px;
+  padding: 30px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -302,13 +333,13 @@ form button {
   font-size: 2em;
   color: #333;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .property-details-locations {
-  font-size: 1em;
+  font-size: 1.5em;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .property-details-span {
@@ -331,14 +362,16 @@ form button {
 .property-details-summary {
   font-size: 1em;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  width: 90%;
 }
 
 .property-details-image {
-  width: 100%;
+  width: 60%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 20px;
+  box-shadow: #888;
 }
 
 /* .infos-text {
@@ -396,4 +429,15 @@ form button {
   font-size: 0.9em;
   color: #666;
   padding: 5px 0;
+}
+
+#property-detail-verified {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  border: 0.55px solid black;
+  border-radius: 5px;
+  color: #888;
+  width: 10%;
 }

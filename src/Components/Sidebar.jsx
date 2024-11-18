@@ -1,11 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <button>Great-Deals</button>
-      <button>Premium</button>
-      <button>VIP</button>
+      <Link to="/GreatDeals">
+        <button>Great Deals</button>
+      </Link>
+      <Link to="/Premium">
+        <button>Premium</button>
+      </Link>
+      <Link to="/Vip">
+        <button>VIP</button>
+      </Link>
     </div>
   );
 };
