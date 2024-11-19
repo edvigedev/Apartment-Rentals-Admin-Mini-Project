@@ -16,17 +16,12 @@ const PropertyList = ({ properties, setProperties }) => {
     // Render a div element to contain the property list
     <div>
       {properties.map((property) => {
-        // Ignore properties with null or undefined price
+        console.log("Property:", property);
         if (!property.price) return null;
 
-        // Render Property component for each property in state
-        // Use property ID as key for mapping
         return (
           <div key={property.id}>
-            <Property
-              property={property}
-              deleteProperty={deleteProperty} // Pass deleteProperty function to Property component
-            />
+            <Property property={property} deleteProperty={deleteProperty} />
           </div>
         );
       })}

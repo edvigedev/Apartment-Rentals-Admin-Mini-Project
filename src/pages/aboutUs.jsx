@@ -1,6 +1,6 @@
 import React from "react";
 import Edvige from "../assets/images/edi.png";
-import Baptiste from "../assets/images/bat.jpeg";
+import Baptiste from "../assets/images/bat.jpg";
 
 function AboutUs() {
   return (

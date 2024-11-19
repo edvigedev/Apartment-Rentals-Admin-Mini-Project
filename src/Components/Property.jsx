@@ -5,7 +5,11 @@ const Property = ({ property, deleteProperty }) => {
   return (
     <div>
       <div className="property-container" key={property.id}>
-        <img src={property.picture_url} />
+        <img
+          src={property.picture_url || "/path/to/default-image.jpg"}
+          alt={property.name}
+          style={{ width: "200px", height: "auto" }}
+        />
         <div className="infos-text">
           <Link
             to={`/propertyDetails/${property.id}`}
