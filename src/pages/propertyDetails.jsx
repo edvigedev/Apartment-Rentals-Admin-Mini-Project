@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import propertyDatas from "../assets/data/data.json";
 
 const PropertyDetails = () => {
@@ -62,6 +62,10 @@ const PropertyDetails = () => {
               ))
             : "No amenities listed"}
         </ul>
+
+        <Link to={`/Update/${propertyId}`}>
+          <button>Update</button>
+        </Link>
       </div>
     </div>
   );

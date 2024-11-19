@@ -12,6 +12,7 @@ import PropertyDetails from "./pages/propertyDetails";
 import GreatDeals from "./pages/GreatDeals";
 import Premium from "./pages/Premium";
 import Vip from "./pages/Vip";
+import Update from "./pages/Update";
 
 function App() {
   const [properties, setProperties] = useState(PropertyDatas.results);
@@ -64,6 +65,13 @@ function App() {
             path="/Vip"
             element={
               <Vip properties={properties} setProperties={setProperties} />
+            }
+          />
+
+          <Route
+            path="/Update/:propertyId"
+            element={
+              <Update properties={properties} setProperties={setProperties} />
             }
           />
         </Routes>
