@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import propertyDatas from "../assets/data/data.json";
 
-const PropertyDetails = () => {
+const PropertyDetails = ({ properties }) => {
   const { propertyId } = useParams(); // Obtenez l'ID depuis l'URL
   const propertyDetail = propertyDatas.results.find(
     (prop) => prop.id === Number(propertyId)

@@ -16,7 +16,6 @@ const PropertyList = ({ properties, setProperties }) => {
     // Render a div element to contain the property list
     <div>
       {properties.map((property) => {
-        console.log("Property:", property);
         if (!property.price) return null;
 
         return (
