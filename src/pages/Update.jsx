@@ -8,6 +8,11 @@ const Update = ({ properties, setProperties }) => {
   const [name, setName] = useState("");
   const [image, setImage] = useState(""); // Base64 or file path
   const [price, setPrice] = useState("");
+  const [location, setLocation] = useState("");
+  const [description, setDescription] = useState("");
+  const [hostImage, setHostImage] = useState("");
+  const [hostName, setHostName] = useState("");
+  const [amenities, setAmenities] = useState([]);
 
   const { propertyId } = useParams();
   const nav = useNavigate();
@@ -15,13 +20,18 @@ const Update = ({ properties, setProperties }) => {
   // Load existing property data
   useEffect(() => {
     const foundProperty = properties.find(
-      (oneProperty) => oneProperty.id == propertyId
+      (oneProperty) => String(oneProperty.id) === propertyId
     );
 
     if (foundProperty) {
       setName(foundProperty.name || "");
       setImage(foundProperty.picture_url || "");
       setPrice(foundProperty.price?.replace("$", "") || "");
+      setLocation(foundProperty.location || "");
+      setDescription(foundProperty.description || "");
+      setHostName(foundProperty.host_name || "");
+      setHostImage(foundProperty.host_picture_url || "");
+      setAmenities(foundProperty.amenities || []); // Ensure amenities is always an array
     }
   }, [properties, propertyId]);
 
@@ -32,12 +42,19 @@ const Update = ({ properties, setProperties }) => {
     const updatedProperty = {
       id: propertyId,
       name,
-      picture_url: image, // Use updated image (drag-and-drop)
-      price: `$${parseFloat(price).toFixed(2)}`, // Format price
+      picture_url: image,
+      price: `$${parseFloat(price).toFixed(2)}`,
+      location,
+      description,
+      host_name: hostName,
+      host_picture_url: hostImage,
+      amenities: Array.isArray(amenities)
+        ? amenities
+        : amenities.split(",").map((item) => item.trim()), // Split only if it's a string
     };
 
     const updatedArr = properties.map((oneProperty) => {
-      if (oneProperty.id == propertyId) {
+      if (String(oneProperty.id) === propertyId) {
         return { ...oneProperty, ...updatedProperty };
       }
       return oneProperty;
@@ -48,17 +65,27 @@ const Update = ({ properties, setProperties }) => {
   };
 
   // Handle file drop
-  const handleFileChange = (acceptedFiles) => {
+  const handleFileChange = (acceptedFiles, setter) => {
     const reader = new FileReader();
     reader.onload = () => {
-      setImage(reader.result); // Convert to Base64 for display or saving
+      setter(reader.result); // Convert to Base64 for display or saving
     };
     reader.readAsDataURL(acceptedFiles[0]); // Read the first file
   };
 
-  const { getRootProps, getInputProps } = useDropzone({
-    onDrop: handleFileChange,
-    accept: "image/jpeg, image/png, image/gif",
+  const { getRootProps: getImageRootProps, getInputProps: getImageInputProps } =
+    useDropzone({
+      onDrop: (files) => handleFileChange(files, setImage),
+      accept: fileTypes.join(", "),
+      multiple: false,
+    });
+
+  const {
+    getRootProps: getHostImageRootProps,
+    getInputProps: getHostImageInputProps,
+  } = useDropzone({
+    onDrop: (files) => handleFileChange(files, setHostImage),
+    accept: fileTypes.join(", "),
     multiple: false,
   });
 
@@ -69,22 +96,40 @@ const Update = ({ properties, setProperties }) => {
         <label>Name:</label>
         <input
           type="text"
-          name="title"
+          name="name"
           value={name || ""}
           onChange={(event) => setName(event.target.value)}
           placeholder="Property Name"
         />
 
+        <label>Location:</label>
+        <input
+          type="text"
+          name="location"
+          value={location || ""}
+          onChange={(event) => setLocation(event.target.value)}
+          placeholder="Property Location"
+        />
+
+        <label>Price:</label>
+        <input
+          type="number"
+          name="price"
+          value={price || ""}
+          onChange={(event) => setPrice(event.target.value)}
+          placeholder="Price"
+        />
+
         <label>Image:</label>
         <div
-          {...getRootProps()}
+          {...getImageRootProps()}
           style={{
             border: "2px dashed #ccc",
             padding: "10px",
             marginTop: "10px",
           }}
         >
-          <input {...getInputProps()} />
+          <input {...getImageInputProps()} />
           <p>Drag and drop an image here, or click to select</p>
         </div>
         {image && (
@@ -98,13 +143,54 @@ const Update = ({ properties, setProperties }) => {
           </div>
         )}
 
-        <label>Price:</label>
+        <label>Description:</label>
+        <textarea
+          name="description"
+          value={description || ""}
+          onChange={(event) => setDescription(event.target.value)}
+          placeholder="Property Description"
+          rows="4"
+        />
+
+        <label>Host Image:</label>
+        <div
+          {...getHostImageRootProps()}
+          style={{
+            border: "2px dashed #ccc",
+            padding: "10px",
+            marginTop: "10px",
+          }}
+        >
+          <input {...getHostImageInputProps()} />
+          <p>Drag and drop a host image here, or click to select</p>
+        </div>
+        {hostImage && (
+          <div>
+            <p>Preview:</p>
+            <img
+              src={hostImage}
+              alt="Host"
+              style={{ width: "200px", height: "auto", marginTop: "10px" }}
+            />
+          </div>
+        )}
+
+        <label>Host Name:</label>
         <input
-          type="number"
-          name="price"
-          value={price || ""}
-          onChange={(event) => setPrice(event.target.value)}
-          placeholder="Actual Price"
+          type="text"
+          name="hostName"
+          value={hostName || ""}
+          onChange={(event) => setHostName(event.target.value)}
+          placeholder="Host Name"
+        />
+
+        <label>Amenities:</label>
+        <textarea
+          name="amenities"
+          value={Array.isArray(amenities) ? amenities.join(", ") : amenities} // Convert array to string for input
+          onChange={(event) => setAmenities(event.target.value)} // Save as string
+          placeholder="Amenities (comma-separated)"
+          rows="3"
         />
 
         <button type="submit">Update</button>

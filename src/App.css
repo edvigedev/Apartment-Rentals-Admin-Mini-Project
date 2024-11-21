@@ -34,7 +34,7 @@ p {
   justify-content: space-around;
   align-items: center;
   padding: 15px;
-  width: 100vw;
+  width: 100%;
 }
 
 .navbar img {
@@ -126,8 +126,9 @@ footer {
   color: #fff;
   height: 10vh;
   padding: 20px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  width: 100%;
+  /* border-top-right-radius: 10px;
+  border-top-left-radius: 10px; */
   opacity: 85%;
 }
 
