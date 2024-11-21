@@ -34,7 +34,7 @@ const PropertyDetails = ({ properties }) => {
         alt={propertyDetail.name || "Property Image"}
       />
       <h3 className="property-details-price">
-        Price: {propertyDetail.price ? propertyDetail.price : "N/A"} q.d.
+        Price: {propertyDetail.price ? propertyDetail.price : "N/A"} night
       </h3>
       <div className="property-details-host-info">
         <img
