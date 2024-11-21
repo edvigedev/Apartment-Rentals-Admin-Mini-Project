@@ -64,7 +64,7 @@ const PropertyDetails = ({ properties }) => {
         </ul>
 
         <Link to={`/Update/${propertyId}`}>
-          <button>Update</button>
+          <button className="update-button">Update</button>
         </Link>
       </div>
     </div>
