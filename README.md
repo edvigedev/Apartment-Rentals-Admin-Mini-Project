@@ -18,6 +18,8 @@ npm uuvid npm useDropzone
 👤 **Edvige and Baptiste**
 
 * Github: [@BaptisteDSH](https://github.com/BaptisteDSH)
+* Github: [@edvigedev](https://github.com/edvigedev)
+
 
 ## Show your support
 
